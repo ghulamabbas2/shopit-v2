@@ -7,16 +7,16 @@ export default [
     ratings: 4.5,
     images: [
       {
-        public_id: "shopit/products/demo/u0u5mx7ofp8drzi5yjjt",
-        url: "http://res.cloudinary.com/udemy-courses/image/upload/v1689961646/shopit/products/demo/u0u5mx7ofp8drzi5yjjt.jpg",
+        public_id: "shopit/demo/nkkjkta63uiazppzkmjf",
+        url: "http://res.cloudinary.com/udemy-courses/image/upload/v1698577488/shopit/demo/nkkjkta63uiazppzkmjf.jpg",
       },
       {
-        public_id: "shopit/products/demo/g3d7h76n7bdibwfgdrmf",
-        url: "http://res.cloudinary.com/udemy-courses/image/upload/v1689961649/shopit/products/demo/g3d7h76n7bdibwfgdrmf.jpg",
+        public_id: "shopit/demo/hz1iwdqzrvxtfxincvju",
+        url: "http://res.cloudinary.com/udemy-courses/image/upload/v1698577488/shopit/demo/hz1iwdqzrvxtfxincvju.jpg",
       },
       {
-        public_id: "shopit/products/demo/odfmkygdxwwn8i6crteq",
-        url: "http://res.cloudinary.com/udemy-courses/image/upload/v1689961652/shopit/products/demo/odfmkygdxwwn8i6crteq.jpg",
+        public_id: "shopit/demo/oc2dvvkxyxukc13y9pjv",
+        url: "http://res.cloudinary.com/udemy-courses/image/upload/v1698577488/shopit/demo/oc2dvvkxyxukc13y9pjv.jpg",
       },
     ],
     category: "Electronics",
@@ -33,20 +33,20 @@ export default [
     ratings: 1.65,
     images: [
       {
-        public_id: "shopit/products/demo/b9m0ddogmkd8xnypmh1l",
-        url: "http://res.cloudinary.com/udemy-courses/image/upload/v1689961785/shopit/products/demo/b9m0ddogmkd8xnypmh1l.jpg",
+        public_id: "shopit/demo/e3hweb3tbp5zacfi564c",
+        url: "http://res.cloudinary.com/udemy-courses/image/upload/v1698577509/shopit/demo/e3hweb3tbp5zacfi564c.jpg",
       },
       {
-        public_id: "shopit/products/demo/i0rjlownsug7ihiqy2ag",
-        url: "http://res.cloudinary.com/udemy-courses/image/upload/v1689961788/shopit/products/demo/i0rjlownsug7ihiqy2ag.jpg",
+        public_id: "shopit/demo/mjcc0kg0lzxegrauh8qc",
+        url: "http://res.cloudinary.com/udemy-courses/image/upload/v1698577509/shopit/demo/mjcc0kg0lzxegrauh8qc.jpg",
       },
       {
-        public_id: "shopit/products/demo/w9ttz25bj24he0krbax6",
-        url: "http://res.cloudinary.com/udemy-courses/image/upload/v1689961790/shopit/products/demo/w9ttz25bj24he0krbax6.jpg",
+        public_id: "shopit/demo/iruzmpgrhb6xyqheppxg",
+        url: "http://res.cloudinary.com/udemy-courses/image/upload/v1698577509/shopit/demo/iruzmpgrhb6xyqheppxg.jpg",
       },
       {
-        public_id: "shopit/products/demo/kqenveun6pifklr9mj3i",
-        url: "http://res.cloudinary.com/udemy-courses/image/upload/v1689961793/shopit/products/demo/kqenveun6pifklr9mj3i.jpg",
+        public_id: "shopit/demo/bj3auijqcxxvkwdohznb",
+        url: "http://res.cloudinary.com/udemy-courses/image/upload/v1698577510/shopit/demo/bj3auijqcxxvkwdohznb.jpg",
       },
     ],
     category: "Electronics",
@@ -63,12 +63,12 @@ export default [
     ratings: 3.5,
     images: [
       {
-        public_id: "shopit/products/demo/whezlvjnrkidycmwyhzu",
-        url: "http://res.cloudinary.com/udemy-courses/image/upload/v1689961825/shopit/products/demo/whezlvjnrkidycmwyhzu.jpg",
+        public_id: "shopit/demo/yqqwxrgst2pi3frtngaw",
+        url: "http://res.cloudinary.com/udemy-courses/image/upload/v1698577531/shopit/demo/yqqwxrgst2pi3frtngaw.jpg",
       },
       {
-        public_id: "shopit/products/demo/wqakdatlgelfbcydmomr",
-        url: "http://res.cloudinary.com/udemy-courses/image/upload/v1689961828/shopit/products/demo/wqakdatlgelfbcydmomr.jpg",
+        public_id: "shopit/demo/pgcwny8xyshsnwaiikbm",
+        url: "http://res.cloudinary.com/udemy-courses/image/upload/v1698577531/shopit/demo/pgcwny8xyshsnwaiikbm.jpg",
       },
     ],
     category: "Electronics",
@@ -85,14 +85,12 @@ export default [
     ratings: 4.5,
     images: [
       {
-        public_id: "shopit/products/demo/s2bqwkc4b7gjzxa3p04m",
-        url: "http://res.cloudinary.com/udemy-courses/image/upload/v1689961845/shopit/products/demo/s2bqwkc4b7gjzxa3p04m.jpg",
-        _id: "64bac579e3048a1f5fdc074b",
+        public_id: "shopit/demo/yxbrklp7snr7dgxfrxu9",
+        url: "http://res.cloudinary.com/udemy-courses/image/upload/v1698577543/shopit/demo/yxbrklp7snr7dgxfrxu9.jpg",
       },
       {
-        public_id: "shopit/products/demo/t6jcqjfntqnnsh2f3pw2",
-        url: "http://res.cloudinary.com/udemy-courses/image/upload/v1689961848/shopit/products/demo/t6jcqjfntqnnsh2f3pw2.jpg",
-        _id: "64bac579e3048a1f5fdc074c",
+        public_id: "shopit/demo/i8ge1ilin2fz9tk2okni",
+        url: "http://res.cloudinary.com/udemy-courses/image/upload/v1698577543/shopit/demo/i8ge1ilin2fz9tk2okni.jpg",
       },
     ],
     category: "Headphones",
@@ -109,16 +107,16 @@ export default [
     ratings: 4.8,
     images: [
       {
-        public_id: "shopit/products/demo/sqese5xqf6ay1jkswtfp",
-        url: "http://res.cloudinary.com/udemy-courses/image/upload/v1689961861/shopit/products/demo/sqese5xqf6ay1jkswtfp.jpg",
+        public_id: "shopit/demo/yj00oalanbzmbzctsbln",
+        url: "http://res.cloudinary.com/udemy-courses/image/upload/v1698577557/shopit/demo/yj00oalanbzmbzctsbln.jpg",
       },
       {
-        public_id: "shopit/products/demo/yndc6awfjozxrmd5ayld",
-        url: "http://res.cloudinary.com/udemy-courses/image/upload/v1689961864/shopit/products/demo/yndc6awfjozxrmd5ayld.jpg",
+        public_id: "shopit/demo/mijzcdd5sle8a2any1i8",
+        url: "http://res.cloudinary.com/udemy-courses/image/upload/v1698577557/shopit/demo/mijzcdd5sle8a2any1i8.jpg",
       },
       {
-        public_id: "shopit/products/demo/q86wvqtv8c2oppan4jre",
-        url: "http://res.cloudinary.com/udemy-courses/image/upload/v1689961866/shopit/products/demo/q86wvqtv8c2oppan4jre.jpg",
+        public_id: "shopit/demo/kxckb0o7fbdwqgmugoct",
+        url: "http://res.cloudinary.com/udemy-courses/image/upload/v1698577557/shopit/demo/kxckb0o7fbdwqgmugoct.jpg",
       },
     ],
     category: "Electronics",
@@ -135,8 +133,8 @@ export default [
     ratings: 4.1,
     images: [
       {
-        public_id: "shopit/products/demo/wjmh3m8wf8g0xfyqlvj2",
-        url: "http://res.cloudinary.com/udemy-courses/image/upload/v1689961883/shopit/products/demo/wjmh3m8wf8g0xfyqlvj2.jpg",
+        public_id: "shopit/demo/xmndneguqtrcutpf9wcz",
+        url: "http://res.cloudinary.com/udemy-courses/image/upload/v1698577572/shopit/demo/xmndneguqtrcutpf9wcz.jpg",
       },
     ],
     category: "Accessories",
@@ -153,16 +151,16 @@ export default [
     ratings: 4.7,
     images: [
       {
-        public_id: "shopit/products/demo/byjahv2ddmsnmnqwtskd",
-        url: "http://res.cloudinary.com/udemy-courses/image/upload/v1689961898/shopit/products/demo/byjahv2ddmsnmnqwtskd.jpg",
+        public_id: "shopit/demo/q6ybe84qlkzwet9qwptz",
+        url: "http://res.cloudinary.com/udemy-courses/image/upload/v1698577585/shopit/demo/q6ybe84qlkzwet9qwptz.jpg",
       },
       {
-        public_id: "shopit/products/demo/yfgxkpzrigcnk0z4cbba",
-        url: "http://res.cloudinary.com/udemy-courses/image/upload/v1689961901/shopit/products/demo/yfgxkpzrigcnk0z4cbba.jpg",
+        public_id: "shopit/demo/niqqio1faynnscubkkmd",
+        url: "http://res.cloudinary.com/udemy-courses/image/upload/v1698577585/shopit/demo/niqqio1faynnscubkkmd.jpg",
       },
       {
-        public_id: "shopit/products/demo/e9ubi6mikey7btcnifaf",
-        url: "http://res.cloudinary.com/udemy-courses/image/upload/v1689961904/shopit/products/demo/e9ubi6mikey7btcnifaf.jpg",
+        public_id: "shopit/demo/dy3nhjgsdgqcnrwf8u2h",
+        url: "http://res.cloudinary.com/udemy-courses/image/upload/v1698577585/shopit/demo/dy3nhjgsdgqcnrwf8u2h.jpg",
       },
     ],
     category: "Cameras",
@@ -172,7 +170,6 @@ export default [
     reviews: [],
   },
   {
-    _id: "64bac2deb339bd5091b14a60",
     name: "Apple MacBook Air (13-inch, 8GB RAM, 256GB SSD Storage) - Space Gray",
     price: 949.99,
     description:
@@ -180,16 +177,16 @@ export default [
     ratings: 4.9,
     images: [
       {
-        public_id: "shopit/products/demo/np4p4z4i5y9n71hiexmp",
-        url: "http://res.cloudinary.com/udemy-courses/image/upload/v1689961917/shopit/products/demo/np4p4z4i5y9n71hiexmp.jpg",
+        public_id: "shopit/demo/jzqaj98nnhy0hcsilx9y",
+        url: "http://res.cloudinary.com/udemy-courses/image/upload/v1698577597/shopit/demo/jzqaj98nnhy0hcsilx9y.jpg",
       },
       {
-        public_id: "shopit/products/demo/jmvc8esxcoodru2joxp8",
-        url: "http://res.cloudinary.com/udemy-courses/image/upload/v1689961920/shopit/products/demo/jmvc8esxcoodru2joxp8.jpg",
+        public_id: "shopit/demo/welkq4dgfi5267usmj0n",
+        url: "http://res.cloudinary.com/udemy-courses/image/upload/v1698577597/shopit/demo/welkq4dgfi5267usmj0n.jpg",
       },
       {
-        public_id: "shopit/products/demo/wocsz2et9xqwav719bkv",
-        url: "http://res.cloudinary.com/udemy-courses/image/upload/v1689961923/shopit/products/demo/wocsz2et9xqwav719bkv.jpg",
+        public_id: "shopit/demo/pabtjloyzenmr6z8klcr",
+        url: "http://res.cloudinary.com/udemy-courses/image/upload/v1698577600/shopit/demo/pabtjloyzenmr6z8klcr.jpg",
       },
     ],
     category: "Laptops",
@@ -206,12 +203,12 @@ export default [
     ratings: 5,
     images: [
       {
-        public_id: "shopit/products/demo/fm9hqunigewddqddvbhm",
-        url: "http://res.cloudinary.com/udemy-courses/image/upload/v1689961938/shopit/products/demo/fm9hqunigewddqddvbhm.jpg",
+        public_id: "shopit/demo/mq0zpyzmzqokphs9m9we",
+        url: "http://res.cloudinary.com/udemy-courses/image/upload/v1698577619/shopit/demo/mq0zpyzmzqokphs9m9we.jpg",
       },
       {
-        public_id: "shopit/products/demo/ux3ueez5owfthx2fj1jo",
-        url: "http://res.cloudinary.com/udemy-courses/image/upload/v1689961941/shopit/products/demo/ux3ueez5owfthx2fj1jo.jpg",
+        public_id: "shopit/demo/pkyy8rifxpesiwpy23kk",
+        url: "http://res.cloudinary.com/udemy-courses/image/upload/v1698577619/shopit/demo/pkyy8rifxpesiwpy23kk.jpg",
       },
     ],
     category: "Food",
