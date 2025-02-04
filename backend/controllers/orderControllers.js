@@ -114,10 +114,22 @@ export const deleteOrder = catchAsyncErrors(async (req, res, next) => {
   });
 });
 
-async function getSalesData(startDate, endDate) {
+/* 
+    The Goal is to send back an object with 
+    Array of Sales, Number of Orders and Total Sales for each day.
+    and 
+    Aggregated Total Sales and Number of Orders for the entire period.
+  */
+const getSalesData  = async(startDate,endDate) => {
+
+  /* 
+    - Aggregation is means to perform operations on data one by one.
+    - Like a nested operations list. 
+    - The output of the first operation is passed to the second operation and so on.
+  */
   const salesData = await Order.aggregate([
     {
-      // Stage 1 - Filter results
+      // Stage 1 - Filter results as per date ranges
       $match: {
         createdAt: {
           $gte: new Date(startDate),
@@ -127,56 +139,78 @@ async function getSalesData(startDate, endDate) {
     },
     {
       // Stage 2 - Group Data
+      // Group Total Sales and Number of Orders for each date.
       $group: {
         _id: {
+        // Converts "2024-03-15T10:30:00Z" to "2024-03-15"
+        // Required for $group stage to work with dates effectively
           date: { $dateToString: { format: "%Y-%m-%d", date: "$createdAt" } },
         },
-        totalSales: { $sum: "$totalAmount" },
-        numOrders: { $sum: 1 }, // count the number of orders
+        totalSalesPerDay: { $sum: "$totalAmount" },
+        numOrdersPerDay: { $sum: 1 }, // count the number of orders
       },
     },
   ]);
-
-  // Create a Map to store sales data and num of order by data
-  const salesMap = new Map();
+  
+  /*  
+    When we create a graph
+    We need entire dates including dates with no sales and no orders.
+    So we need to fill in the missing dates.
+    Why create a hashmap ?
+    Aux to creating an Array of dates between the start and end dates.
+  */
+  const salesMap = new Map()
   let totalSales = 0;
-  let totalNumOrders = 0;
-
-  salesData.forEach((entry) => {
-    const date = entry?._id.date;
-    const sales = entry?.totalSales;
-    const numOrders = entry?.numOrders;
-
-    salesMap.set(date, { sales, numOrders });
-    totalSales += sales;
-    totalNumOrders += numOrders;
-  });
+  let totalOrders = 0;
+  
+  salesData.forEach((eachDate) => {
+    const date = eachDate?._id.date;
+    const totalSalesPerDay = eachDate?.totalSalesPerDay
+    const numOrdersPerDay = eachDate?.numOrdersPerDay
+    // Date is the key and values are results of total sales and number of orders.
+    salesMap.set(date, { totalSalesPerDay, numOrdersPerDay });
+    totalSales += totalSalesPerDay;
+    totalOrders += numOrdersPerDay;
+  })
 
   // Generate an array of dates between start & end Date
   const datesBetween = getDatesBetween(startDate, endDate);
-
-  // Create final sales data array with 0 for dates without sales
-  const finalSalesData = datesBetween.map((date) => ({
-    date,
-    sales: (salesMap.get(date) || { sales: 0 }).sales,
-    numOrders: (salesMap.get(date) || { numOrders: 0 }).numOrders,
-  }));
-
-  return { salesData: finalSalesData, totalSales, totalNumOrders };
+  const finalSalesData = datesBetween.map((date) => {
+    // If date exists in salesMap return it else return 0
+    return {
+      date,
+      // If data exists in hashmap then fetch, else 0.
+      totalSalesPerDay: salesMap.get(date)?.totalSalesPerDay ||  0,
+      numOrdersPerDay: salesMap.get(date)?.numOrdersPerDay || 0
+    }
+  })
+  
+  return ({
+    finalSalesData,
+    totalSales,
+    totalOrders
+  })
 }
-
-function getDatesBetween(startDate, endDate) {
-  const dates = [];
-  let currentDate = new Date(startDate);
-
-  while (currentDate <= new Date(endDate)) {
-    const formattedDate = currentDate.toISOString().split("T")[0];
-    dates.push(formattedDate);
-    currentDate.setDate(currentDate.getDate() + 1);
-  }
-
+    
+// Return an array of dates between start and end date
+const getDatesBetween = (startDate, endDate) => {
+    const dates = [];
+    let currentDate = new Date(startDate);
+    /* 
+      getDate to fetch day of month
+      setDate to set day of month
+    */
+    while (currentDate <= new Date(endDate)) {
+      //ISO String format = '2025-02-04T09:19:19.359Z'
+      const formattedDate = currentDate.toISOString().split("T")[0];
+      dates.push(formattedDate);
+      //Incrementing current date by one
+      currentDate.setDate(currentDate.getDate() + 1);
+    }
+  
   return dates;
 }
+  
 
 // Get Sales Data  =>  /api/v1/admin/get_sales
 export const getSales = catchAsyncErrors(async (req, res, next) => {
@@ -186,14 +220,15 @@ export const getSales = catchAsyncErrors(async (req, res, next) => {
   startDate.setUTCHours(0, 0, 0, 0);
   endDate.setUTCHours(23, 59, 59, 999);
 
-  const { salesData, totalSales, totalNumOrders } = await getSalesData(
+  const { finalSalesData, totalSales, totalOrders } = await getSalesData(
     startDate,
     endDate
   );
 
   res.status(200).json({
-    totalSales,
-    totalNumOrders,
-    sales: salesData,
+    totalSales: totalSales,
+    totalNumOrders: totalOrders,
+    sales: finalSalesData,
   });
+
 });
